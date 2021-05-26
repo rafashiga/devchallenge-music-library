@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Music Library</title>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<aside class="sidebar">
+			<div class="profile">
+				<img
+					class="profile__avatar"
+					src="./assets/images/profile.jpg"
+					alt="Dany Schudler"
+				/>
+				<div class="profile__info">
+					<h1 class="profile__name">Dany Schudler</h1>
+					<a href="#" class="profile__link"
+						>Edit profile <i class="fal fa-cog"></i
+					></a>
+				</div>
+			</div>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link nav__link--active">
+							<i class="far fa-home"></i> Overview
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="fal fa-newspaper"></i> News
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="fal fa-music"></i> Playlists
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="fal fa-wifi"></i> Discover
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="far fa-sliders-v"></i> Dashboard
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="fal fa-comment-alt-lines"></i> Messages
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="fal fa-bell"></i> Notifications
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">
+							<i class="far fa-user"></i> Account
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<section class="form">
+				<i class="far fa-search"></i>
+				<input
+					type="text"
+					class="form__search"
+					placeholder="Search artists, playlist or tracks"
+				/>
+			</section>
+			<div class="container">
+				<section class="playlists">
+					<h2>Featured Playlists</h2>
+					<ul class="playlists__list">
+						<li class="playlists__item">
+							<img src="./assets/images/playlist1.jpg" alt="" />
+							<h3>Only STARTDUST</h3>
+							<p>24 tracks</p>
+						</li>
+						<li class="playlists__item">
+							<img src="./assets/images/playlist2.jpg" alt="" />
+							<h3>Mike Vella</h3>
+							<p>12 tracks</p>
+						</li>
+						<li class="playlists__item">
+							<img src="./assets/images/playlist3.jpg" alt="" />
+							<h3>the best singles s2</h3>
+							<p>163 tracks</p>
+						</li>
+						<li class="playlists__item">
+							<img src="./assets/images/playlist4.jpg" alt="" />
+							<h3>Indie</h3>
+							<p>139 tracks</p>
+						</li>
+					</ul>
+				</section>
+
+				<section class="profile-views">
+					<h2>Profile Views</h2>
+					<ul class="profile-views__list">
+						<li class="profile-views__item">
+							<div class="profile-views__info">
+								<img src="./assets/images/view1.jpg" alt="" />
+								<div class="profile-views__description">
+									<h4>Jenny Villa</h4>
+									<p>1 day ago</p>
+								</div>
+							</div>
+							<p>4 albums</p>
+						</li>
+						<li class="profile-views__item">
+							<div class="profile-views__info">
+								<img src="./assets/images/view2.jpg" alt="" />
+								<div class="profile-views__description">
+									<h4>Aquila</h4>
+									<p>3 day ago</p>
+								</div>
+							</div>
+							<p>2 albums</p>
+						</li>
+						<li class="profile-views__item">
+							<div class="profile-views__info">
+								<img src="./assets/images/view3.jpg" alt="" />
+								<div class="profile-views__description">
+									<h4>Jenny Villa</h4>
+									<p>2 week ago</p>
+								</div>
+							</div>
+							<p>5 albums</p>
+						</li>
+					</ul>
+				</section>
+
+				<section class="tracks">
+					<h2>Tracks</h2>
+					<ul class="tracks__list">
+						<li class="tracks__item">
+							<img src="./assets/images/track1.jpg" alt="" />
+							<h4>Mahara Bon</h4>
+							<p>Sexy in Paris</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track2.jpg" alt="" />
+							<h4>Donna</h4>
+							<p>Pseudo-Life</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track3.jpg" alt="" />
+							<h4>Aven</h4>
+							<p>Magic</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track4.jpg" alt="" />
+							<h4>Mahara Bon</h4>
+							<p>Sexy in Paris</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track5.jpg" alt="" />
+							<h4>Mahara Bon</h4>
+							<p>Sexy in Paris</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track6.jpg" alt="" />
+							<h4>Mahara Bon</h4>
+							<p>Sexy in Paris</p>
+						</li>
+
+						<li class="tracks__item">
+							<img src="./assets/images/track7.jpg" alt="" />
+							<h4>Mahara Bon</h4>
+							<p>Sexy in Paris</p>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
+
+<!-- 
+Search artists, playlists or tracks
+Dany Schudler
+Edit Profile
+Overview
+News
+Playlists
+Discover
+Dashboard
+Messages
+Notifications
+Account
+Featured Playlists
+Profile Views
+Tracks -->

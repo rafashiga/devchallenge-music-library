@@ -1,0 +1,311 @@
+body {
+	display: grid;
+	grid-template-areas: 'MAIN';
+
+	@include desktop-sm {
+		min-height: 100vh;
+
+		grid-template-columns: minmax(200px, 17%) auto;
+		grid-template-areas: 'SIDEBAR MAIN';
+	}
+}
+
+.sidebar {
+	grid-area: SIDEBAR;
+	background-color: $color-blue-900;
+	padding: rem(120) rem(20);
+
+	display: none;
+
+	@include desktop-sm {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.profile {
+		display: flex;
+		align-items: center;
+
+		&__avatar {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+
+		&__info {
+			margin-left: rem(16);
+		}
+
+		&__name {
+			color: $color-white;
+			width: 50%;
+			margin-bottom: rem(5);
+			font-size: rem(19);
+		}
+
+		&__link {
+			color: #66678b;
+			text-decoration: none;
+			font-size: rem(14);
+		}
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&__list {
+			width: 60%;
+			list-style: none;
+
+			border-top: 1px solid rgba($color-gray-400, 0.4);
+			padding-top: 2rem;
+
+			&:first-child {
+				margin-bottom: rem(36);
+			}
+		}
+
+		&__item {
+			color: $color-white;
+			margin-bottom: 1rem;
+		}
+
+		&__link {
+			display: flex;
+			gap: 1rem;
+			color: $color-gray-400;
+			font-weight: 500;
+			text-decoration: none;
+			transition: all 0.2s;
+
+			&:hover {
+				color: $color-white;
+			}
+
+			&--active {
+				color: $color-white;
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
+
+main {
+	grid-area: MAIN;
+	background-color: $color-blue-800;
+	padding: 1rem;
+	overflow: hidden;
+
+	@include desktop-sm {
+		padding: rem(20) rem(48) rem(50) rem(0);
+		padding-left: rem(48);
+	}
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.fa-search {
+		color: $color-gray-400;
+	}
+
+	&__search {
+		min-width: rem(400);
+		background: none;
+		border: none;
+		padding: 1rem;
+
+		color: $color-white;
+	}
+}
+
+.container {
+	margin-top: 2rem;
+
+	display: grid;
+
+	grid-template-areas: 'PLAYLISTS' 'VIEWS' 'TRACKS';
+
+	@include desktop-sm {
+		grid-template-columns: 50% 50%;
+		grid-template-areas: 'PLAYLISTS PLAYLISTS' 'VIEWS TRACKS';
+	}
+
+	// overflow: hidden;
+
+	h2 {
+		font-size: rem(28);
+		color: $color-white;
+		margin-bottom: 1.25rem;
+	}
+}
+
+.playlists {
+	grid-area: PLAYLISTS;
+	margin-bottom: rem(36);
+	overflow: hidden;
+
+	@include desktop-sm {
+		margin-right: 2rem;
+	}
+
+	&__list {
+		width: 100%;
+		padding-bottom: 2rem;
+
+		list-style: none;
+		display: flex;
+		gap: 2.25rem;
+		overflow-x: scroll;
+
+		margin-right: 10rem;
+
+		&::-webkit-scrollbar-track {
+			padding: 1px 0;
+			border-radius: rem(10);
+			background-color: #201839;
+		}
+
+		&::-webkit-scrollbar {
+			width: rem(10);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: $color-blue-700;
+		}
+	}
+
+	&__item {
+		img {
+			border-radius: rem(24);
+			object-fit: cover;
+
+			width: rem(460);
+			height: rem(250);
+		}
+		h3 {
+			margin-top: 1rem;
+			color: $color-white;
+			font-size: rem(28);
+		}
+		p {
+			margin-top: rem(10);
+			font-size: rem(14);
+			font-weight: 600;
+			color: $color-gray-400;
+		}
+	}
+}
+
+.profile-views {
+	grid-area: VIEWS;
+	color: $color-gray-400;
+	font-size: rem(14);
+	font-weight: 500;
+
+	@include desktop-sm {
+		width: 90%;
+	}
+
+	@include desktop-md {
+		width: 60%;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+
+		img {
+			width: rem(60);
+			height: rem(60);
+			border-radius: rem(5);
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		color: $color-gray-400;
+
+		h4 {
+			font-weight: 600;
+			font-size: rem(16);
+		}
+
+		p {
+			margin-top: rem(10);
+		}
+	}
+}
+
+.tracks {
+	grid-area: TRACKS;
+	overflow: hidden;
+
+	&__list {
+		list-style: none;
+		display: flex;
+		gap: 1.5rem;
+		overflow-x: scroll;
+		padding-bottom: 1rem;
+
+		@include desktop-sm {
+			margin-right: 5rem;
+		}
+
+		&::-webkit-scrollbar-track {
+			padding: 1px 0;
+			border-radius: rem(10);
+			background-color: #201839;
+		}
+
+		&::-webkit-scrollbar {
+			width: rem(10);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 5px;
+			background-color: $color-blue-700;
+		}
+	}
+
+	&__item {
+		color: $color-gray-400;
+
+		img {
+			width: rem(140);
+			height: rem(140);
+			object-fit: cover;
+			border-radius: rem(5);
+		}
+
+		h4 {
+			margin-top: rem(5);
+			letter-spacing: rem(1);
+		}
+
+		p {
+			letter-spacing: rem(1);
+			font-size: rem(14);
+		}
+	}
+}
