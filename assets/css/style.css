@@ -30,17 +30,38 @@ body {
   }
 }
 
+.hide-sidebar {
+  grid-template-columns: auto;
+  grid-template-areas: "MAIN";
+}
+.hide-sidebar .sidebar {
+  display: none;
+}
+
+.show-sidebar {
+  grid-template-columns: 80% auto;
+  grid-template-areas: "SIDEBAR MAIN";
+}
+@media (min-width: 768px) {
+  .show-sidebar {
+    grid-template-columns: minmax(200px, 17%) auto;
+  }
+}
+.show-sidebar .sidebar {
+  display: flex;
+}
+
 .sidebar {
   grid-area: SIDEBAR;
   background-color: #040517;
   padding: 7.5rem 1.25rem;
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (min-width: 768px) {
   .sidebar {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 }
 .sidebar .profile {
@@ -121,6 +142,13 @@ main {
   width: 100%;
   display: flex;
   align-items: center;
+}
+.form .menu {
+  border: none;
+  font-size: 1.125rem;
+  color: #484a58;
+  background: none;
+  margin-right: 2rem;
 }
 .form .fa-search {
   color: #484a58;

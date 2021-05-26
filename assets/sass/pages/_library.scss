@@ -10,17 +10,39 @@ body {
 	}
 }
 
+.hide-sidebar {
+	grid-template-columns: auto;
+	grid-template-areas: 'MAIN';
+
+	.sidebar {
+		display: none;
+	}
+}
+
+.show-sidebar {
+	grid-template-columns: 80% auto;
+	grid-template-areas: 'SIDEBAR MAIN';
+
+	@include desktop-sm {
+		grid-template-columns: minmax(200px, 17%) auto;
+	}
+
+	.sidebar {
+		display: flex;
+	}
+}
+
 .sidebar {
 	grid-area: SIDEBAR;
 	background-color: $color-blue-900;
 	padding: rem(120) rem(20);
 
 	display: none;
+	flex-direction: column;
+	justify-content: space-between;
 
 	@include desktop-sm {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 	}
 
 	.profile {
@@ -114,6 +136,14 @@ main {
 	width: 100%;
 	display: flex;
 	align-items: center;
+
+	.menu {
+		border: none;
+		font-size: 1.125rem;
+		color: $color-gray-400;
+		background: none;
+		margin-right: 2rem;
+	}
 
 	.fa-search {
 		color: $color-gray-400;
