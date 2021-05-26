@@ -17,7 +17,7 @@
   <a href="#space_invader-technologies">Technologies</a>
   <br>
   <br>
-  <img src="./assets/images/website.png">
+  <img src="./assets/images/website-desktop.png">
   <br>
   <h3 align="center">
     <strong>
