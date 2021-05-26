@@ -32,3 +32,4 @@
 
 - HTML
 - SASS
+- Font Awesome
